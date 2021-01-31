@@ -44,6 +44,7 @@ header{
     width:100%;
     position: absolute;/* absolute */
     background: transparent;
+    padding-top: 2em;
 }
 
 .banner{
@@ -60,10 +61,14 @@ header{
 // navigation
 nav{
     text-align: center;
+    display: flex;
+    justify-content: space-between;
     a{
         text-decoration: none;
         color: $text-color;
-        display: inline-block;
+        
+        flex-direction: row;
+        justify-content: center;
         padding: 1em 2em;
     }
 }
@@ -79,14 +84,19 @@ nav{
 
 main{
     background-color: $bg-color;
+    
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
 }
 .sideleft{
-    width: 30%;
-    float: left;
+    text-align: center;
 }
 .sideright{
-    width: 60%;
-    float: right;
+    text-align: center;
 }
 .btn{
     background: $main-color;
@@ -98,14 +108,17 @@ main{
 }
 
 .box{
-    width: 30%;
-    float: left;
     padding: 2em;
     text-align: center;
     color: $text-color;
 }
 .box .fas{
     font-size: 2em;
+}
+
+.box-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 footer{
     width: 100%;
